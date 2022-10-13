@@ -12,8 +12,7 @@ public:
 	string call() { return name; }
 };
 
-class GamblingGame
-{
+class GamblingGame {
 	int num[3];
 public:
 	bool start() {
@@ -29,20 +28,16 @@ public:
 	}
 };
 
-
-
-int main() 
-{
+int main() {
 	int n;
 	GamblingGame Game;
-	cout << "***** 갬블링 게임을 시작합니다. *****" << endl;
-	cout << "플레이어 수 입력: ";
+	cout << "*****<< Starting Gambling Game >>*****" << endl;
+	cout << "Type the number of players: ";
 	cin >> n;
 	Player *P = new Player[n];
 	
-	for (int i = 0; i < n; i++)
-	{
-		cout << "플레이어" << i + 1 << " 이름: ";
+	for (int i = 0; i < n; i++) {
+		cout << "Player" << i + 1 << " Name: ";
 		P[i].getN();
 	}
 
@@ -52,12 +47,11 @@ int main()
 		cin.get();
 		cout << endl;
 		if (Game.start()) {
-			cout << P[j].call() << "님 승리!!" << endl;
+			cout << P[j].call() << "YOU WIN!" << endl;
 			break;
 		}
-		else
-		{
-			cout << "아쉽군요 !" << endl;
+		else {
+			cout << "Aww... Maybe next time!" << endl;
 			j++;
 			continue;
 		}
