@@ -31,7 +31,6 @@ public:
 int main() {
 	int n;
 	GamblingGame Game;
-	cout << "*****<< Starting Gambling Game >>*****" << endl;
 	cout << "Type the number of players: ";
 	cin >> n;
 	Player *P = new Player[n];
